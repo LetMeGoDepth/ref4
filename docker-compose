@@ -1,0 +1,9 @@
+services:
+    server:
+        build: /Backend
+        ports:         
+- 8000:8000
+    client:
+        build: /my-app
+        ports:            
+- 3000:3000
