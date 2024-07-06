@@ -4,8 +4,8 @@ import {useState} from 'react';
 import './fr1.css'
 
 export const UploadPage = () => {
-  const [text, setText] = useState('python');
-  const [salary, setsalary] = useState(0);
+  const [text, setText] = useState('Учитель');
+  const [salary, setsalary] = useState(100000);
 
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,12 +20,12 @@ export const UploadPage = () => {
 
   return (
     <form className='designe_number_two' onSubmit={handleSubmit}>
-      <p className='disigne'><b>Название вакансии</b></p><p className='Zarplata'><b>Зарплата</b></p>
+      <p className='disigne'><b>Название вакансии</b></p><p className='Zp'><b>Зарплата</b></p>
       <div className='block'>
       <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
       <input type="number" value={salary} onChange={(e) => setsalary(Number(e.target.value))} />
       </div>
-      <button className='buttonchik' type="submit">Загрузка вакансий</button>
+      <button className='butt' type="submit">Загрузка вакансий</button>
     </form>
   );
 };

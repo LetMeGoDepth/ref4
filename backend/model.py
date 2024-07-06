@@ -1,6 +1,7 @@
-#import sqlalchemy as sq
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column
+from sqlalchemy import Integer
+from sqlalchemy import String
 
 
 Base = declarative_base()
@@ -23,3 +24,4 @@ class Vacancie(Base):
     snippet_responsibility = Column(String)
     experience = Column(String)
     salary = Column(String)
+    

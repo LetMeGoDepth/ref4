@@ -1,4 +1,6 @@
-import React, { ChangeEventHandler, useEffect, useState } from 'react';
+import { ChangeEventHandler } from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import './fr2.css'
 

@@ -1,7 +1,5 @@
-import sqlalchemy as sq
 from sqlalchemy.orm import Session
 from cls import ParsVs
-from cls import Paransies
 from model import Vacancie
 
 

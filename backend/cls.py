@@ -23,3 +23,4 @@ class ParsVs(BaseModel):
     snippet_requirement: str 
     snippet_responsibility: str 
     salary: str
+    
