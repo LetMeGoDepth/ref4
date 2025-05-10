@@ -1,22 +1,19 @@
 from sqlalchemy.orm import Session
-from cls import ParsVs
-from model import Vacancie
+from schemas import Vacancy
+from database import Vacancy
 
 
-
-
-def cr_vac(db: Session, vacancies: ParsVs):
-    db_vacs = Vacancie(**vacancies)
+def create_vacancy(db: Session, vacancys: dict):
+    db_vacs = Vacancy(**vacancys)
     db.add(db_vacs)
     db.commit()
     return db_vacs
 
 
 
-
-def upd_vac(db: Session, vacancies: dict):
-    db_vacs = db.query(Vacancie).filter(Vacancie == vacancies['vacancies_id'])
-    for var, value in vacancies.items():
+def update_vacancy(db: Session, vacancys: dict):
+    db_vacs = db.query(Vacancy).filter(Vacancy == vacancys['vacancys_id'])
+    for var, value in vacancys.items():
         setattr(db_vacs, var, value) if value else None
     db.commit()
     return db_vacs

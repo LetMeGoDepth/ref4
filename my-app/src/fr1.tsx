@@ -11,7 +11,7 @@ export const UploadPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:8000/vacancies_post', { text });
+      const response = await axios.post('http://127.0.0.1:8000/vacancys_post', { text });
       console.log(response.data);
     } catch (error) {
       console.error(error);
